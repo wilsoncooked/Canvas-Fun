@@ -8,19 +8,7 @@ class Canvas extends React.Component {
       line: [],
       lastX: 0,
       lastY: 0,
-      prevPos: {
-        offsetX: 0,
-        offsetY: 0,
-      },
       hue: 1,
-      direction: true,
-      controlDisplay: 'none',
-      controlLeft: '100%',
-      customColor: false,
-      color: '#000000',
-      customStroke: false,
-      maxWidth: 100,
-      minWidth: 5,
     };
     this.canvasRef = React.createRef();
     this.onMouseDown = this.onMouseDown.bind(this);
@@ -91,7 +79,7 @@ class Canvas extends React.Component {
     this.ctx = this.canvas.getContext('2d');
     this.ctx.lineJoin = 'round';
     this.ctx.lineCap = 'round';
-    this.ctx.globalCompositeOperation = 'multiply';
+    this.ctx.globalCompositeOperation = 'difference';
   }
 
   render() {
