@@ -63,7 +63,7 @@ class Canvas extends React.Component {
       });
     }
   }
-  paint(prevPos, currPos, strokeStyle) {
+  paint(prevPos, currPos) {
     const {offsetX, offsetY} = currPos;
     const {offsetX: x, offsetY: y} = prevPos;
     this.ctx.beginPath();
